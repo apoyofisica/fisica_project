@@ -62,7 +62,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="biblioteca1/index.php">Biblioteca</a></li>
 						<li><a href="#gallery">Galeria</a></li>
 						<!--<li><a href="identificarse.html">Identificarse</a></li>-->
-						<li><a href="convalidaciones/index.php">Identificarse</a></li>
+						<li><a href="{{ url('auth/login') }}">Identificarse</a></li>
 						<li><a href="http://192.168.5.132/moodle-2.4.1/index.php">Moodle</a></li>
 						<li><a href="#contact">Contactos</a></li>
 					</ul>
