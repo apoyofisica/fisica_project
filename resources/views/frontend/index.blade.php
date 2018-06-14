@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<a href="#index.html" class="logo"><h1>Carrera de Fisica</h1></a>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-			
+
 			</div>
 		</div>
 	</div>
@@ -62,7 +62,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="biblioteca1/index.php">Biblioteca</a></li>
 						<li><a href="#gallery">Galeria</a></li>
 						<!--<li><a href="identificarse.html">Identificarse</a></li>-->
+						@if(auth()->check())
+                        <li><a href="{{ url('auth/login') }}">Dashboard</a></li>
+                        @else
 						<li><a href="{{ url('auth/login') }}">Identificarse</a></li>
+                        @endif
 						<li><a href="http://192.168.5.132/moodle-2.4.1/index.php">Moodle</a></li>
 						<li><a href="#contact">Contactos</a></li>
 					</ul>
@@ -90,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="first-slide" src="{{ asset('assets/images/carrera_fisica2.JPG') }}" alt="First slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -98,7 +102,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="second-slide" src="{{ asset('assets/images/ciencias_puras.JPG') }}" alt="Second slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -106,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="third-slide" src="{{ asset('assets/images/carrera_fisica1.JPG') }}" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -114,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="third-slide" src="{{ asset('assets/images/est fisica.') }}jpg" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -122,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="third-slide" src="{{ asset('assets/images/carrera_fisica3.JPG') }}" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -130,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<img class="third-slide" src="{{ asset('assets/images/biblioteca.JPG') }}" alt="Third slide">
 			<div class="container">
 				<div class="carousel-caption">
-              
+
 				</div>
 			</div>
         </div>
@@ -157,12 +161,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="col-sm-2 col-xs-12">
 							<img src="{{ asset('assets/images/about-img1') }}.png" class="img-responsive slideanim" alt="about-img">
 						</div>
-						<div class="col-sm-10 col-xs-12">						
+						<div class="col-sm-10 col-xs-12">
 							<div class="about-info slideanim">
 								<p>Ella es una de las mas distinguidas licenciadas en Fisica Aplicada, cuenta con un doctorado y una especialidad en Semi Conductores.</p>
 							</div>
 						</div>
-					</div>						
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
@@ -170,19 +174,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="row">
 						<div class="col-sm-2 col-xs-12">
 							<img src="{{ asset('assets/images/about-img2') }}.png" class="img-responsive slideanim" alt="about-img">
-						</div>	
+						</div>
 						<div class="col-sm-10 col-xs-12">
 							<div class="about-info slideanim">
 								<p>El es uno de nuestros docentes mas antiguos, realizo una maestria en Fisica Astronomica.</p>
 							</div>
 						</div>
-					</div>		
+					</div>
 				</div>
 			</div>
 		</div>
-		
+
 </section>
-<!-- /About Section -->	
+<!-- /About Section -->
 <!-- Our Services -->
 <section class="our-services" id="services">
 	<h3 class="text-center slideanim">Servicios</h3>
@@ -200,8 +204,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<h4>Laboratorio de Fisica</h4>
 								<p>Ambiente 102</p>
 							</div>
-						</div>	
-					</div>	
+						</div>
+					</div>
 				</div>
 				<div class="serv-info slideanim">
 					<p>Este laboratorio cuenta con una variedad de equipos para poder realizar los experimentos concernientes a la materia de laboratorio, este no es usado únicamente por los estudiantes de dicha carrera, sino que tambien es de gran apoyo para las carreras que llevan dentro de su malla curricular materias relacionadas con el area de la física.</p>
@@ -220,7 +224,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 				<div class="serv-info slideanim">
 					<p>Las aulas cuentan con dispositivos de proyeccion (datas) que mejoran el aprendizaje y ka rápida comprensión de las clases, pudiendo asi proyectar video, sonido y movimiento en el mismo.</p>
 				</div>
@@ -233,14 +237,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="col-sm-6 col-xs-6">
 							<img src="{{ asset('assets/images/serv-img3') }}.jpg" alt="" class="img-responsive slideanim">
 						</div>
-						<div class="col-sm-6 col-xs-6">		
+						<div class="col-sm-6 col-xs-6">
 							<div class="serv-img-details slideanim">
 								<h4>Nuestros Estudiantes</h4>
 								<p></p>
 							</div>
 						</div>
 					</div>
-				</div>		
+				</div>
 				<div class="serv-info slideanim">
 					<p>Formamos estudiantes muy capaces y les brindamos todos los servicios que necesiten.</p>
 				</div>
@@ -258,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 					</div>
-				</div>		
+				</div>
 				<div class="serv-info slideanim">
 					<p>La Carrera cuenta con gabinetes de computacion equipadas para poder realizar trabajos, esta cuenta con un data para brindar una mejor enseñanza a los estudantes.</p>
 				</div>
@@ -280,10 +284,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>Competencias de la Carrera</h4>
 					<p>La Carrera de Física, acorde con la Misión y la visión de la Universidad, tiene como competencia
 					<p>Principal:</p>
-						<p>Formar profesionales competentes e idóneos dotado de conocimiento profundo del fenómeno físico desde la óptica de los conocimientos científicos, de habilidades y destrezas en  la investigación y dispuesto a servir a la comunidad.</p> 
+						<p>Formar profesionales competentes e idóneos dotado de conocimiento profundo del fenómeno físico desde la óptica de los conocimientos científicos, de habilidades y destrezas en  la investigación y dispuesto a servir a la comunidad.</p>
 						<p>Desarrolla el análisis, conocimiento y la comprensión del trabajo que ha de realizar, con conocimiento del tema, dominio de   las etapas de la investigación y aplicación efectiva en la solución de problemas teóricos y prácticos en beneficio propio y de la Ciencia en especial como parte final de su PRE GRADO.</p>
 						<p>Desarrolla las habilidades en el uso de los métodos y procedimientos de la investigación Científica, solución de problemas Científicos  previamente  identificados y fundamentales. en el marco de la aplicación de los conocimientos.</p>
-					
+
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 info-specs">
@@ -310,14 +314,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 </section>
 <!-- /Our Information -->
 <!-- Our Gallery -->
 <section class="our-gallery" id="gallery">
 	<h3 class="text-center slideanim">Galeria</h3>
-	<p class="text-center slideanim"> </p> 
+	<p class="text-center slideanim"> </p>
 	<div class="container">
 		<div class="content slideanim">
 			<div class="chroma-gallery mygallery">
@@ -342,23 +346,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
 				<div class="cur-details slideanim">
-				
-				
+
+
 				</figcaption>
 							  <section id="reproductor_video">
-						
+
 									<head>
 								<link rel="stylesheet" href="css/reproductor.css">
 								<script src="j{{ asset('assets/s/script1') }}.js"></script>
 								</head>
 							<body>
 								<section id="reproductor">
-									
+
 									<video id="medio">
 										<source src="video/bolivia.mp4">
 										<!--<source src="Video/v1.ogg">-->
 									<!--</video>
-									
+
 									<nav>
 										<div id="botones">
 											<button type="button" id="reproducir">
@@ -372,7 +376,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</nav>
 								</section>
 							</body>
-						
+
 					</section>
 				<figcaption>
 
@@ -380,9 +384,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>Our Important Aspects</h4>
 					<p class="cur1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 					<div class="curriculum-info">
-						<div>	
+						<div>
 							<i class="fa fa-fort-awesome"></i>
-							<h5>Collegiate Stays On Track</h5> 
+							<h5>Collegiate Stays On Track</h5>
 							<p class="cur2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
 						</div>
 						<div>
@@ -392,17 +396,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div>
 							<i class="fa fa-graduation-cap"></i>
-							<h5>Step Into Graduation</h5> 
+							<h5>Step Into Graduation</h5>
 							<p class="cur2">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 slideanim">
-				<div class="video"> 
+				<div class="video">
 					<!-- <iframe src="https://player.vimeo.com/video/15428374?title=0&byline=0&portrait=0" -->
 					<!--frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -414,7 +418,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="row">
 			<div class="col-lg-12 slideanim">
 				<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>-->
@@ -448,7 +452,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 					</div>
 				</form>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
@@ -462,7 +466,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="col-lg-4 footer-left">
 				<h4>Informacion del Contacto</h4>
 				<div class="contact-info">
-					<div class="address">	
+					<div class="address">
 						<i class="glyphicon glyphicon-globe"></i>
 						<p class="p3">Av. del Maestro</p>
 						<p class="p3">Potosi, Bolivia</p>
@@ -477,7 +481,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 			</div><!-- col -->
-			
+
 			<div class="col-lg-4 footer-right">
 				<h4>Contactenos</h4>
 				<p>También puede encontrarnos por:</p>
@@ -504,12 +508,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- js files for gallery -->
 <script src="{{ asset('assets/js/chromagallery.pkgd.min.js') }}"></script>
 	<script type="text/javascript">
-		$(document).ready(function() 
+		$(document).ready(function()
 		{
 		    $(".mygallery").chromaGallery();
 		});
 	</script>
-<!-- /js files for gallery -->	
+<!-- /js files for gallery -->
 <!-- Back To Top -->
 <script src="{{ asset('assets/js/backtotop.js') }}"></script>
 <!-- /Back To Top -->
