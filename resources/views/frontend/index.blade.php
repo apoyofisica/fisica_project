@@ -26,8 +26,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="{{ asset('assets/js/modernizr.custom.js') }}"></script>
 <!-- /js files -->
 </head>
-<body oncontextmenu="return false" onkeydown="return false" id="index.html" data-spy="scroll" data-target=".navbar" data-offset="60">
+{{--<body oncontextmenu="return false" onkeydown="return false" id="index.html" data-spy="scroll" data-target=".navbar" data-offset="60">--}}
 <!-- Top Bar -->
+<body>
 <section class="top-bar">
 	<div class="container">
 		<div class="row">
