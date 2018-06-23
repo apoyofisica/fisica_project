@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class DocenteController extends Controller
+class AdminController extends DataController
 {
+    public function __construct()
+    {
+        DataController::getDataUser();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +21,7 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        return view('frontend/test');
+        return view('admin/index');
     }
 
     /**

@@ -25,9 +25,9 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 
 Route::group(['middleware' => ['auth','docente'], 'prefix'=> 'docente'], function () {
-    Route::resource('/', 'DocenteController'); 
+    Route::resource('/', 'AdminController');
 });
 
 Route::group(['middleware' => ['auth','administrativo'], 'prefix'=> 'administrativo'], function () {
-    Route::resource('/', 'DocenteController');
+    Route::resource('/', 'AdminController');
 });
