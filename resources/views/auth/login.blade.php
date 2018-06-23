@@ -1,60 +1,40 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Carrera de Fisica</title>
-
-    <link href="{{ asset('login/res/bootstrap3/css/bootstrap.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('login/font-awesome/css/font-awesome.min.css') }}">
-    <style>
-        .centered{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-    </style>
-
+    <title>LogIn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('adm/css/main.css') }}">
 </head>
-
-<body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 text-center centered">
-                <h3>IDENTIFICATE</h3>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Ingresar</h3>
-                    </div>
-                    <div class="panel-body">
-                        {!! Form::open(['url' => '/auth/login', 'class' => 'form']) !!}
-                        {!! csrf_field() !!}
-                        <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Usuario o email" name="email" type="text">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
-                            </div>
-                            <input class="btn btn-default btn-block" type="submit" value="Iniciar Sesion">
-                        </fieldset>
-                        <a class="btn btn-link hidden" href="{{ url('password/email') }}">Forgot Your Password?</a>
-                        {!! Form::close() !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<script src="{{ asset('login/res/jquery.min.js') }}"></script>
-<script src="{{ asset('login/res/bootstrap3/js/bootstrap.min.js') }}"></script>
-
-
+<body class="cover body_background">
+{!! Form::open(['url' => '/auth/login', 'class' => 'full-box logInForm', 'autocomplete'=>'off']) !!}
+{!! csrf_field() !!}
+<p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
+<p class="text-center text-muted text-uppercase">Inicia sesión con tu cuenta</p>
+<div class="form-group label-floating">
+    <label class="control-label" for="UserEmail">E-mail</label>
+    <input class="form-control" id="UserEmail" name="email" type="email">
+    <p class="help-block">Escribe tú E-mail</p>
+</div>
+<div class="form-group label-floating">
+    <label class="control-label" for="UserPass">Contraseña</label>
+    <input class="form-control" id="UserPass" name="password" type="password">
+    <p class="help-block">Escribe tú contraseña</p>
+</div>
+<div class="form-group text-center">
+    <input type="submit" value="Iniciar sesión" class="btn btn-raised btn-danger">
+</div>
+{!! Form::close() !!}
+<!--====== Scripts -->
+<script src="{{ asset('adm/js/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('adm/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('adm/js/material.min.js') }}"></script>
+<script src="{{ asset('adm/js/ripples.min.js') }}"></script>
+<script src="{{ asset('adm/js/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('adm/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script src="{{ asset('adm/js/main.js') }}"></script>
+<script>
+    $.material.init();
+</script>
 </body>
 </html>
