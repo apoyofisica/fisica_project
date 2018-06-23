@@ -39,8 +39,8 @@ class RedirectIfAuthenticated
                 case 'docente':
                     return redirect()->to('docente');
                     break;
-                case 'estudiante':
-                    return redirect()->to('estudiante');
+                case 'administrativo':
+                    return redirect()->to('administrativo');
                     break;
             }
         }

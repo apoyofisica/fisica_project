@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class Docente
+class Administrativo
 {
     protected $auth;
     public function __construct(Guard $auth)
@@ -17,13 +17,12 @@ class Docente
     {
         switch ($this->auth->user()->user_role){
             case 'docente':
-//                return redirect()->to('docente');
+                return redirect()->to('docente');
                 break;
             case 'administrativo':
-                return redirect()->to('administrativo');
+//                return redirect()->to('administrativo');
                 break;
         }
         return $next($request);
     }
-
 }
